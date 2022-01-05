@@ -1,5 +1,20 @@
-# math_magicians
+![](https://img.shields.io/badge/Microverse-blueviolet)
+
+# Math_magicians
 "Math magicians" is a website for all fans of mathematics. It is a Single Page App (SPA) that allows users to:  Make simple calculations. Read a random math-related quote.
+
+## Screenshots
+
+![screenshot](./screenshot/pc.jpeg)
+
+## Built With
+- React
+- CSS
+
+## Prerequisites
+ - [React](https://reactjs.org/docs/getting-started.html)
+ -  [Git](https://git-scm.com/downloads)
+ -  [Node](https://nodejs.org/en/download/)
 
 # Getting Started
 
@@ -71,3 +86,27 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+## Authors
+
+👤 **Salim Abdulai**
+
+- GitHub: [@RayhanTabase](https://github.com/RayhanTabase)
+- Twitter: [@RayhanTabase](https://twitter.com/@RayhanTabase)
+- LinkedIn: [Salim-Abdulai](https://linkedin.com/in/salim-abdulai-5430065b)
+- Email: salimabdulai2@yahoo.com
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
