@@ -28,10 +28,15 @@ button {
   background: gray;
   color: #fff;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-end;
   min-height: 3em;
   padding-right: 0.5em;
+}
+
+#resultsContainer .currentCalculation {
+  font-size: 0.6em;
 }
 
 #calculatorBody {

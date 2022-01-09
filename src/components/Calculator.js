@@ -10,20 +10,71 @@ function Calculator() {
     operation: null,
   });
 
+  const [currentCalc, setCurrentCalc] = useState({
+    calculation: false,
+    num1: null,
+    num2: null,
+    prevTotal: null,
+    prevOperation: null,
+  });
+
   const handleClick = async (e) => {
-    const response = await calculate(data, e.target.name);
+    const buttonName = e.target.name;
+    const response = await calculate(data, buttonName);
     setData({
       total: response.total,
       next: response.next,
       operation: response.operation,
     });
+
+    if (buttonName === '=') {
+      if (response.total) {
+        setCurrentCalc({
+          calculation: true,
+          num1: currentCalc.num1,
+          num2: currentCalc.num2,
+          prevTotal: response.total,
+          prevOperation: currentCalc.prevOperation,
+        });
+      } else {
+        setCurrentCalc({
+          calculation: false,
+          num1: null,
+          num2: null,
+          prevTotal: null,
+          prevOperation: null,
+        });
+      }
+    } else {
+      setCurrentCalc({
+        calculation: false,
+        num1: response.total || response.next,
+        num2: response.total ? response.next : null,
+        total: null,
+        prevOperation: response.operation,
+      });
+    }
   };
 
   const { total, next } = data;
+  const {
+    calculation, num1, num2, prevTotal, prevOperation,
+  } = currentCalc;
   return (
     <div id="calculatorContainer">
       <div id="calculator">
-        <div id="resultsContainer">{next || total || 0}</div>
+        <div id="resultsContainer">
+          <div className="currentCalculation">
+            {num1}
+            {prevOperation}
+            {num2}
+            {calculation ? '=' : false}
+            {calculation ? prevTotal : false}
+          </div>
+          <div className="currentTotal">
+            {next || total || 0}
+          </div>
+        </div>
         <div id="calculatorBody">
           <button type="button" onClick={handleClick} name="AC">AC</button>
           <button type="button" onClick={handleClick} name="+/-">+/-</button>
