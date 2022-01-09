@@ -27,8 +27,6 @@ function Calculator() {
       operation: response.operation,
     });
 
-    if (!response) console.log('E', response);
-
     if (buttonName === '=') {
       if (response.total) {
         setCurrentCalc({
