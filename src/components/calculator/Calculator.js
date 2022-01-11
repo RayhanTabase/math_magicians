@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Calculator.css';
 
-import calculate from '../logic/calculate';
+import calculate from '../../logic/calculate';
 
 function Calculator() {
   const [data, setData] = useState({
@@ -61,7 +61,12 @@ function Calculator() {
     calculation, num1, num2, prevTotal, prevOperation,
   } = currentCalc;
   return (
-    <div id="calculatorContainer">
+    <div id="calculatorContainer" className="container">
+      <h2 className="header">
+        {`
+        Let's do some math!
+        `}
+      </h2>
       <div id="calculator">
         <div id="resultsContainer">
           <div className="currentCalculation">

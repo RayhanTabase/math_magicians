@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=The+Nautigal:wght@700&display=swap');
+
+.quoteContainer {
+  margin-top: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'The Nautigal', cursive;
+  font-size: 2.5rem;
+}
+
+.italize {
+  font-style: italic;
+}
