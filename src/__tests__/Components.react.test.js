@@ -5,7 +5,9 @@ import '@testing-library/jest-dom';
 
 import Calculator from '../components/calculator/Calculator';
 import Home from '../components/home/Home';
+import Quote from '../components/quote/Quote';
 
+// Calculator Component
 describe('Calculator', () => {
   const arr = [
     'AC',
@@ -45,6 +47,7 @@ describe('Calculator', () => {
   });
 });
 
+// Home Component
 describe('Home', () => {
   test('should render the correct text content', () => {
     const { container } = render(<Home />);
@@ -57,4 +60,17 @@ describe('Home', () => {
   });
 });
 
-
+// Quotes Components
+describe('Quotes', () => {
+  test('should render the quotes', () => {
+    const quote = 'Mathematics is not about numbers, equations, computations, or algorithms: it is about understanding.';
+    const author = 'William Paul Thurston';
+    const { container } = render(<Quote />);
+    const span1 = container.querySelectorAll('span')[0];
+    const span2 = container.querySelectorAll('span')[1];
+    const span3 = container.querySelectorAll('span')[2];
+    expect(span1).toHaveTextContent(quote);
+    expect(span2).toHaveTextContent('-');
+    expect(span3).toHaveTextContent(author);
+  });
+});
