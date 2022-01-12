@@ -33,7 +33,7 @@ describe('Calculator', () => {
     '.',
   ];
 
-  render(<Calculator />);
+  const { asFragment } = render(<Calculator />);
 
   test('should render calculator and its children', async () => {
     const buttons = screen.getAllByRole('button');
@@ -46,6 +46,9 @@ describe('Calculator', () => {
     });
     expect(typeof buttons === 'object').toEqual(true);
     expect(buttons.length).toBe(19);
+  });
+  test('snapshot test for Calculator component', () => {
+    expect(asFragment()).toMatchSnapshot();
   });
 });
 
@@ -62,6 +65,10 @@ describe('Navbar', () => {
     expect(screen.getByText('Calculator')).toBeInTheDocument();
     expect(screen.getByText('Quote')).toBeInTheDocument();
   });
+  test('snapshot test for Navbar component', () => {
+    const { asFragment } = render(<Navbar />, { wrapper: MemoryRouter });
+    expect(asFragment()).toMatchSnapshot();
+  });
 });
 
 // Home Component
@@ -75,17 +82,23 @@ describe('Home', () => {
     expect(h2).toHaveTextContent(header);
     expect(p).toHaveTextContent(paragraph);
   });
+  test('snapshot test for Home component', () => {
+    const { asFragment } = render(<Home />);
+    expect(asFragment()).toMatchSnapshot();
+  });
 });
 
 // Quotes Components
 describe('Quotes', () => {
   test('should render the quotes', () => {
+    const { container, asFragment } = render(<Quote />);
     const quote = 'Mathematics is not about numbers, equations, computations, or algorithms: it is about understanding.';
     const author = 'William Paul Thurston';
-    const { container } = render(<Quote />);
     const span1 = container.querySelectorAll('span')[0];
     const span2 = container.querySelectorAll('span')[1];
     const span3 = container.querySelectorAll('span')[2];
+    // snapshot test for Quotes component
+    expect(asFragment()).toMatchSnapshot();
     expect(span1).toHaveTextContent(quote);
     expect(span2).toHaveTextContent('-');
     expect(span3).toHaveTextContent(author);
