@@ -1,8 +1,7 @@
 function Home() {
   const data = {
     header: 'Welcome to our page !',
-    content: `
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
     consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
@@ -19,8 +18,7 @@ function Home() {
     nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid
     ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea
     voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem
-    eum fugiat quo voluptas nulla pariatur?
-    `,
+    eum fugiat quo voluptas nulla pariatur?`,
   };
   return (
     <div className="container">
