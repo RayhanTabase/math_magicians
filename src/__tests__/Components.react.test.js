@@ -4,8 +4,6 @@ import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 import { MemoryRouter } from 'react-router-dom';
 
-
-
 import Calculator from '../components/calculator/Calculator';
 import Home from '../components/home/Home';
 import Quote from '../components/quote/Quote';
@@ -54,7 +52,7 @@ describe('Calculator', () => {
 // Navbar Component
 describe('Navbar', () => {
   test('should render the navbar and its children', async () => {
-    const {container} = render(<Navbar />, {wrapper: MemoryRouter});
+    const { container } = render(<Navbar />, { wrapper: MemoryRouter });
     const headerText = 'Math Magicians';
     const navbar = container.querySelectorAll('li');
     const navbarHeader = container.querySelector('h1');
@@ -63,8 +61,8 @@ describe('Navbar', () => {
     expect(screen.getByText('Home')).toBeInTheDocument();
     expect(screen.getByText('Calculator')).toBeInTheDocument();
     expect(screen.getByText('Quote')).toBeInTheDocument();
-  })
-})
+  });
+});
 
 // Home Component
 describe('Home', () => {
