@@ -7,6 +7,9 @@
 
 ![screenshot](./screenshot/pc.jpeg)
 
+## Live Version
+[Live](https://rayhantabase.github.io/math_magicians/)
+
 ## Built With
 - React
 - CSS
