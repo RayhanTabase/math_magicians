@@ -7,8 +7,10 @@
 
 ![screenshot](./screenshot/pc.jpeg)
 
-## Live Version
-[Live](https://rayhantabase.github.io/math_magicians/)
+## Live Versions (Deployed)
+- [Gh pages](https://rayhantabase.github.io/math_magicians/)
+- [Heroku](https://salim-math-magic.herokuapp.com/)
+- [Netlify](https://silly-kepler-42a918.netlify.app)
 
 ## Built With
 - React
